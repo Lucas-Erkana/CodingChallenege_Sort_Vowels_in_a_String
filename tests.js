@@ -1,12 +1,26 @@
 const sortVowels = require('./solution');
 const assert = require('assert');
 
-describe('sortVowels', function () {
-  it('should sort vowels in a given string', function () {
-    assert.strictEqual(sortVowels('lEetcOde'), 'lEOtcede');
-    assert.strictEqual(sortVowels('aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ'), 'aAeEiIoOuUyYbBcCdDfFgGhHjJkKlLmMnNpPqQrRsSvVwWxXzZ');
-    assert.strictEqual(sortVowels('hello world'), 'hllo werld');
-    assert.strictEqual(sortVowels('BCDFGHJKLMNPQRSTVWXYZ'), 'BCDFGHJKLMNPQRSTVWXYZ');
-    assert.strictEqual(sortVowels('aeiouAEIOU'), 'aeiouAEIOU');
-  });
+describe('Tests for sortVowels function', function () {
+
+    it('should correctly sort vowels while keeping consonants in place', function () {
+        assert.strictEqual(sortVowels('lEetcOde'), 'lEOtcede');
+    });
+
+    it('should return the same string when there are no vowels', function () {
+        assert.strictEqual(sortVowels('HmMm'), 'HmMm');
+    });
+
+    it('should handle strings with only vowels', function () {
+        assert.strictEqual(sortVowels('UOIEA'), 'AEIOU');
+    });
+
+    it('should handle case sensitivity correctly', function () {
+        assert.strictEqual(sortVowels('AbCdEfGh'), 'AbCdEfGh');
+    });
+
+    it('should return an empty string when input is empty', function () {
+        assert.strictEqual(sortVowels(''), '');
+    });
+
 });
