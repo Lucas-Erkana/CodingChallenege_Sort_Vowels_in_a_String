@@ -1,34 +1,30 @@
-# CHallenge Title
+## Sort Vowels in a String
 
-Write problem here
+Given a 0-indexed string `s`, permute `s` to get a new string `t` such that:
+- All consonants remain in their original places.
+- The vowels must be sorted in non-decreasing order of their ASCII values.
 
+Return the resulting string `t`.
 
+The vowels are 'a', 'e', 'i', 'o', and 'u', and they can appear in lowercase or uppercase. Consonants comprise all letters that are not vowels.
 
 
 ## Examples
 
-**Input:**
+### Example 1:
 ```
-Write input here
+Input: s = "lEetcOde"
+Output: "lEOtcede"
+Explanation: 'E', 'O', and 'e' are the vowels in `s`; 'l', 't', 'c', and 'd' are all consonants. The vowels are sorted according to their ASCII values, and the consonants remain in the same places.
 ```
-**Output:**
-```
-Write expected result here
-```
-**Explanation:**
-Write explanation here
 
-**Input:**
+### Example 2:
 ```
-Write input here
+Input: s = "lYmpH"
+Output: "lYmpH"
+Explanation: There are no vowels in `s` (all characters in `s` are consonants), so we return "lYmpH".
 ```
-**Output:**
-```
-Write expected result here
-```
-**Explanation:**
-Write explanation here
 
-## Constraints
-
-Write constraints here
+## Constraints:
+- 1 <= s.length <= 105
+- `s` consists only of letters of the English alphabet in uppercase and lowercase.
