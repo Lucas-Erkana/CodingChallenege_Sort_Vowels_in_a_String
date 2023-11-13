@@ -1,9 +1,13 @@
-var functionname = function(parameter) {
-//Write code here
-  };
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var sortVowels = function(s) {
+    
+};
 
 
   let parameter = 'test data'
-console.log(functionname(parameter)) //expected result true
+console.log(sortVowels(parameter)) //expected result true
 
-module.exports = functionname;
+module.exports = sortVowels;
